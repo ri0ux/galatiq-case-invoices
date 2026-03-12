@@ -1,13 +1,16 @@
 import argparse
 import os
+import asyncio
 from agents.ingestion_agent import IngestionAgent
-
+from agents.validation_agent import ValidationAgent
 from utils.file_loader import load_single_invoice, load_invoice_directory
+from models.invoice_schema import RawInvoiceFile
+from models.invoice_state import GLOBAL_INVOICE_STATE
 
 
-def load_invoice(path: str) -> dict:
+def load_invoice(path: str) -> RawInvoiceFile:
     """
-    Load a single invoice file and return a structured state object.
+    Load a single invoice file and return a RawInvoiceFile object.
     """
 
     print(f"\nProcessing invoice: {path}")
@@ -15,20 +18,17 @@ def load_invoice(path: str) -> dict:
     ext = os.path.splitext(path)[1]
     raw_text = load_single_invoice(path)
 
-    invoice_state = {
-        "file_path": path,
-        "file_type": ext,
-        "raw_text": raw_text,
-        "extracted_data": None,
-        "validation": None,
-        "approval": None,
-        "payment": None
-    }
+    raw_invoice = RawInvoiceFile(
+        file_path=path,
+        file_type=ext,
+        raw_text=raw_text,
+        extracted_invoice_number=None
+    )
 
-    return invoice_state
+    return raw_invoice
 
 
-def load_invoices_from_directory(directory: str) -> dict:
+def load_invoices_from_directory(directory: str) -> dict[str, RawInvoiceFile]:
     """
     Load all invoices from a directory into memory.
     """
@@ -39,7 +39,7 @@ def load_invoices_from_directory(directory: str) -> dict:
         print("No invoice files found.")
         return {}
 
-    invoices = {}
+    invoices: dict[str, RawInvoiceFile] = {}
 
     for file_path in files:
         invoice_state = load_invoice(file_path)
@@ -48,7 +48,7 @@ def load_invoices_from_directory(directory: str) -> dict:
     return invoices
 
 
-def main():
+def command_line_parser() -> dict[str, RawInvoiceFile] | None:
 
     parser = argparse.ArgumentParser(
         description="AI Invoice Processing System"
@@ -68,7 +68,7 @@ def main():
 
     args = parser.parse_args()
 
-    invoices = {}
+    invoices: dict[str, RawInvoiceFile] = {}
 
     if args.invoice_path:
 
@@ -82,18 +82,43 @@ def main():
     else:
 
         print("Please provide either --invoice_path or --invoice_dir")
+        return None
+
+    return invoices
+
+
+async def main():
+    invoices = command_line_parser()
+    if not invoices:
         return
 
-    print("\n==============================")
-    print(f"Loaded {len(invoices)} invoice(s) into memory")
-    print("==============================\n")
+    print(f"\nStarting AGENT on {len(invoices)} invoices...")
 
-    print("Starting AGENT")
     ingestion_agent = IngestionAgent()
+    validation_agent = ValidationAgent()
 
-    for path in invoices:
-        print(ingestion_agent.get_response(invoices, path))
+    # 1. Create a list of extraction coroutine objects
+    tasks = [
+        ingestion_agent.invoice_extractor(file_name, raw_invoice) 
+        for file_name, raw_invoice in invoices.items()
+    ]
+    
+    # 2. Run all extraction tasks concurrently
+    # The '*' unpacks the list so gather sees gather(coro1, coro2, ...)
+    print("Extracting data from all invoices concurrently...")
+    await asyncio.gather(*tasks)
 
+    # 3. Validation and Summarization usually require the previous steps 
+    # to be finished (Map-Reduce pattern)
+    print("Validating invoices...")
+    invoice_findings = validation_agent.invoice_validator()
+    print("Invoice findings: ",invoice_findings)
+    
+    print("Summarizing final item collection...")
+    items = ingestion_agent.item_summarizer()
+    
+    print("\nFINAL ITEMS:\n", items)
 
 if __name__ == "__main__":
-    main()
+    # 4. Use asyncio.run to start the event loop
+    asyncio.run(main())
