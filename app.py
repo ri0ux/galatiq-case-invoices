@@ -7,6 +7,7 @@ from typing import Any
 
 import pandas as pd
 import streamlit as st
+from typing import Any, cast
 
 from models.invoice_schema import RawInvoiceFile
 from models.invoice_state import GLOBAL_INVOICE_STATE
@@ -326,9 +327,11 @@ else:
         if not invoice_numbers:
             st.info("No invoice details available.")
         else:
-            selected_invoice = st.selectbox("Select invoice", invoice_numbers)
+            selected_invoice = cast(
+                str,
+                st.selectbox("Select invoice", invoice_numbers, index=0)
+            )
             render_invoice_detail(state, selected_invoice)
-
     with tab3:
         render_items_section(state)
 
