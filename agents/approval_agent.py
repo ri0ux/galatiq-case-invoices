@@ -6,6 +6,11 @@ from agno.models.openai import OpenAIResponses
 from models.approval_schema import ApprovalDecision
 from models.invoice_state import GLOBAL_INVOICE_STATE
 from models.validation_schema import ValidationIssue
+from tools.approval_tools import (
+    get_invoice,
+    get_validation_summary,
+    get_policy_lane,
+)
 
 
 class ApprovalAgent:
@@ -43,8 +48,18 @@ class ApprovalAgent:
             - Do not mention imaginary or inferred issues.
 
             Return structured output only.
+            You may call tools to retrieve invoice data, validation results,
+            and policy classification.
+
+            Use the available tools before making a decision if additional
+            information is needed.
             """,
             output_schema=ApprovalDecision,
+            tools=[
+            get_invoice,
+            get_validation_summary,
+            get_policy_lane,
+            ],
         )
 
         self.critique_agent = Agent(
@@ -72,36 +87,44 @@ class ApprovalAgent:
             Risk score must be an integer from 0 to 100.
 
             Return a corrected final decision in the same structured format.
+            You may call tools to retrieve invoice data, validation results,
+            and policy classification.
+
+            Use the available tools before making a decision if additional
+            information is needed.
             """,
             output_schema=ApprovalDecision,
+            tools=[
+            get_invoice,
+            get_validation_summary,
+            get_policy_lane,
+            ],
         )
 
     def run(self) -> Dict[str, ApprovalDecision]:
         decisions: Dict[str, ApprovalDecision] = {}
 
-        for invoice_number, invoice in GLOBAL_INVOICE_STATE.canonical_invoices.items():
-            validation_summary = self.summarize_validation_issues(invoice_number)
-            policy_lane = self._preclassify(invoice_number)
+        for invoice_number in GLOBAL_INVOICE_STATE.canonical_invoices.keys():
 
-            decision = self._make_initial_decision(
-                invoice_number=invoice_number,
-                invoice=invoice,
-                validation_summary=validation_summary,
-                policy_lane=policy_lane,
-            )
+            # initial decision (agent will call tools internally)
+            decision = self._make_initial_decision(invoice_number)
 
-            critique = self._critique_decision(
-                invoice_number=invoice_number,
-                invoice=invoice,
-                validation_summary=validation_summary,
-                policy_lane=policy_lane,
-                initial_decision=decision,
-            )
+            # reflection loop
+            for _ in range(2):  # 2 critique passes is enough for this system
+                critique = self._critique_decision(
+                    invoice_number=invoice_number,
+                    initial_decision=decision,
+                )
 
-            final_decision = self._merge_decisions(decision, critique)
-            decisions[invoice_number] = final_decision
+                # if critique agrees, stop
+                if critique.status == decision.status and critique.risk_score == decision.risk_score:
+                    break
 
-        GLOBAL_INVOICE_STATE.approvals = decisions
+                # otherwise adopt critique as revised decision
+                decision = critique
+
+            decisions[invoice_number] = decision
+
         return decisions
 
     def summarize_validation_issues(self, invoice_number: str) -> str:
@@ -172,19 +195,9 @@ class ApprovalAgent:
 
         return "auto_approve_candidate"
 
-    def _make_initial_decision(self, invoice_number: str, invoice, validation_summary: str, policy_lane: str) -> ApprovalDecision:
+    def _make_initial_decision(self, invoice_number: str) -> ApprovalDecision:
         prompt = f"""
             Invoice number: {invoice_number}
-            Vendor: {invoice.vendor.name if invoice.vendor else None}
-            Invoice total: {invoice.total}
-            Currency: {invoice.currency}
-            Invoice date: {invoice.invoice_date}
-            Due date: {invoice.due_date}
-            Policy lane: {policy_lane}
-
-            Validation summary:
-            {validation_summary}
-
             Make an approval decision.
             """
 
@@ -192,18 +205,9 @@ class ApprovalAgent:
         decision = cast(ApprovalDecision, result.content)
         return self._normalize_decision(decision, invoice_number)
 
-    def _critique_decision(self, invoice_number: str, invoice, validation_summary: str, policy_lane: str, initial_decision: ApprovalDecision) -> ApprovalDecision:
+    def _critique_decision(self, invoice_number: str, initial_decision: ApprovalDecision) -> ApprovalDecision:
         prompt = f"""
             Invoice number: {invoice_number}
-            Vendor: {invoice.vendor.name if invoice.vendor else None}
-            Invoice total: {invoice.total}
-            Currency: {invoice.currency}
-            Invoice date: {invoice.invoice_date}
-            Due date: {invoice.due_date}
-            Policy lane: {policy_lane}
-
-            Validation summary:
-            {validation_summary}
 
             Initial decision:
             - status: {initial_decision.status}

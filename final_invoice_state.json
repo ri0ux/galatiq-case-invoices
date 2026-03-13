@@ -1309,36 +1309,18 @@
   "item_validations": {
     "widgeta": {
       "item_name": "widgeta",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "widgeta",
-          "issue_type": "Insufficient Inventory",
-          "message": "Aggregated demand for 'widgeta' is 117, but only 15 available in inventory."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "widgetb": {
       "item_name": "widgetb",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "widgetb",
-          "issue_type": "Insufficient Inventory",
-          "message": "Aggregated demand for 'widgetb' is 82, but only 10 available in inventory."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "gadgetx": {
       "item_name": "gadgetx",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "gadgetx",
-          "issue_type": "Insufficient Inventory",
-          "message": "Aggregated demand for 'gadgetx' is 53, but only 5 available in inventory."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "fakeitem": {
       "item_name": "fakeitem",
@@ -1358,36 +1340,18 @@
     },
     "supergizmo": {
       "item_name": "supergizmo",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "supergizmo",
-          "issue_type": "Unknown Item",
-          "message": "Normalized item 'supergizmo' was not found in inventory database."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "megasprocket": {
       "item_name": "megasprocket",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "megasprocket",
-          "issue_type": "Unknown Item",
-          "message": "Normalized item 'megasprocket' was not found in inventory database."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "widgetc": {
       "item_name": "widgetc",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "widgetc",
-          "issue_type": "Unknown Item",
-          "message": "Normalized item 'widgetc' was not found in inventory database."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     }
   },
   "invoice_validations": {
@@ -1406,11 +1370,6 @@
           "item": "due_date",
           "issue_type": "Unusually Urgent Due Date",
           "message": "The invoice due date is the same as the invoice date, indicating an unusually urgent due date."
-        },
-        {
-          "item": "GadgetX",
-          "issue_type": "Out of Stock",
-          "message": "Item 'GadgetX' maps to inventory item 'gadgetx', which has no remaining stock."
         }
       ]
     },
@@ -1427,22 +1386,27 @@
         {
           "item": "vendor_name",
           "issue_type": "Suspicious Vendor Naming",
-          "message": "The vendor name 'Fraudster LLC' is suspicious and suggests possible fraud."
+          "message": "Vendor name 'Fraudster LLC' appears suspicious and may indicate fraudulent intent."
         },
         {
           "item": "due_date",
           "issue_type": "Unusually Urgent Due Date",
-          "message": "The due date is before the invoice date, which is unusually urgent and suspicious."
+          "message": "The due date is before the invoice date, indicating an unusually urgent due date."
         },
         {
           "item": "payment_terms",
           "issue_type": "Urgent Payment Terms",
-          "message": "Payment terms are 'Immediate', indicating urgency that may be coercive."
+          "message": "Payment terms specify 'Immediate', which is unusually urgent."
         },
         {
           "item": "notes",
           "issue_type": "Coercive Payment Language",
-          "message": "Notes contain urgent and coercive language urging immediate payment to avoid penalties."
+          "message": "Notes contain coercive language urging immediate payment with warnings of penalties."
+        },
+        {
+          "item": "notes",
+          "issue_type": "Suspicious Payment Instructions",
+          "message": "Instructions prefer wire transfer in an urgent context, which is a suspicious payment instruction."
         },
         {
           "item": "FakeItem",
@@ -1454,53 +1418,20 @@
     "INV-1004": {
       "file_name": "data/invoices/invoice_1004.json",
       "invoice_number": "INV-1004",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "INV-1005": {
       "file_name": "data/invoices/invoice_1005.json",
       "invoice_number": "INV-1005",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 14 units, but only 10 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "GadgetX",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'GadgetX' requires 8 units, but only 5 remaining for inventory item 'gadgetx'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetB' requires 10 units, but only 3 remaining for inventory item 'widgetb'."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "INV-1006": {
       "file_name": "data/invoices/invoice_1006.csv",
       "invoice_number": "INV-1006",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 5 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "INV-1007": {
       "file_name": "data/invoices/invoice_1007.csv",
@@ -1511,21 +1442,6 @@
           "item": null,
           "issue_type": "Total Mismatch",
           "message": "Invoice total=15525.0 but expected 15635.0 (subtotal + tax_amount)."
-        },
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 20 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        },
-        {
-          "item": "GadgetX",
-          "issue_type": "Out of Stock",
-          "message": "Item 'GadgetX' maps to inventory item 'gadgetx', which has no remaining stock."
         }
       ]
     },
@@ -1537,17 +1453,7 @@
         {
           "item": "vendor_name",
           "issue_type": "Suspicious Vendor Naming",
-          "message": "The vendor name 'NoProd Industries' appears suspicious and may indicate a fraudulent entity."
-        },
-        {
-          "item": "SuperGizmo",
-          "issue_type": "Unknown Item",
-          "message": "Item 'SuperGizmo' maps to normalized key 'supergizmo', which was not found in inventory database."
-        },
-        {
-          "item": "MegaSprocket",
-          "issue_type": "Unknown Item",
-          "message": "Item 'MegaSprocket' maps to normalized key 'megasprocket', which was not found in inventory database."
+          "message": "The vendor name 'NoProd Industries' sounds unusual and potentially suspicious."
         }
       ]
     },
@@ -1580,11 +1486,6 @@
           "item": null,
           "issue_type": "Negative Total",
           "message": "Invoice total is negative: -250.0."
-        },
-        {
-          "item": "total",
-          "issue_type": "Suspicious Amount",
-          "message": "Invoice total amount is negative, which is unusual and suspicious."
         }
       ]
     },
@@ -1597,21 +1498,6 @@
           "item": null,
           "issue_type": "Total Mismatch",
           "message": "Invoice total=7185.0 but expected 7035.0 (subtotal + tax_amount)."
-        },
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 12 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        },
-        {
-          "item": "GadgetX",
-          "issue_type": "Out of Stock",
-          "message": "Item 'GadgetX' maps to inventory item 'gadgetx', which has no remaining stock."
         }
       ]
     },
@@ -1624,24 +1510,8 @@
     "INV-1012": {
       "file_name": "data/invoices/invoice_1012.pdf",
       "invoice_number": "INV-1012",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "Widget A",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'Widget A' requires 12 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        },
-        {
-          "item": "Gadget X",
-          "issue_type": "Out of Stock",
-          "message": "Item 'Gadget X' maps to inventory item 'gadgetx', which has no remaining stock."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "INV-1013": {
       "file_name": "data/invoices/invoice_1013.json",
@@ -1652,84 +1522,26 @@
           "item": null,
           "issue_type": "Total Mismatch",
           "message": "Invoice total=22562.8 but expected 22512.8 (subtotal + tax_amount)."
-        },
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 22 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        },
-        {
-          "item": "GadgetX",
-          "issue_type": "Out of Stock",
-          "message": "Item 'GadgetX' maps to inventory item 'gadgetx', which has no remaining stock."
         }
       ]
     },
     "INV-1014": {
       "file_name": "data/invoices/invoice_1014.xml",
       "invoice_number": "INV-1014",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 4 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "INV-1015": {
       "file_name": "data/invoices/invoice_1015.csv",
       "invoice_number": "INV-1015",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 10 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        },
-        {
-          "item": "GadgetX",
-          "issue_type": "Out of Stock",
-          "message": "Item 'GadgetX' maps to inventory item 'gadgetx', which has no remaining stock."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     },
     "INV-1016": {
       "file_name": "data/invoices/invoice_1016.json",
       "invoice_number": "INV-1016",
-      "status": "failed",
-      "issues": [
-        {
-          "item": "WidgetA",
-          "issue_type": "Insufficient Inventory",
-          "message": "Item 'WidgetA' requires 4 units, but only 1 remaining for inventory item 'widgeta'."
-        },
-        {
-          "item": "WidgetB",
-          "issue_type": "Out of Stock",
-          "message": "Item 'WidgetB' maps to inventory item 'widgetb', which has no remaining stock."
-        },
-        {
-          "item": "WidgetC",
-          "issue_type": "Unknown Item",
-          "message": "Item 'WidgetC' maps to normalized key 'widgetc', which was not found in inventory database."
-        }
-      ]
+      "status": "passed",
+      "issues": []
     }
   },
   "items": [
@@ -1833,114 +1645,275 @@
       "invoice_number": "INV-1001",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validations with no issues; low risk identified.",
+      "reason": "Invoice passed validation with no issues and is classified as auto_approve_candidate policy lane.",
       "risk_score": 5
     },
     "INV-1002": {
       "invoice_number": "INV-1002",
       "approved": false,
-      "status": "rejected",
-      "reason": "Out of stock for item 'GadgetX' and unusually urgent due date (same as invoice date).",
-      "risk_score": 90
+      "status": "manual_review",
+      "reason": "Invoice has an unusually urgent due date which is the same as the invoice date. Policy lane indicates manual review candidate.",
+      "risk_score": 65
     },
     "INV-1003": {
       "invoice_number": "INV-1003",
       "approved": false,
       "status": "rejected",
-      "reason": "Multiple critical validation failures including invalid dates, suspicious vendor, out-of-stock item, and coercive payment terms.",
+      "reason": "Invoice has invalid dates (due date before invoice date), suspicious vendor name, coercive and suspicious payment instructions, and an out of stock item.",
       "risk_score": 95
     },
     "INV-1004": {
       "invoice_number": "INV-1004",
-      "approved": false,
-      "status": "rejected",
-      "reason": "Out of stock item 'WidgetB' present in invoice.",
-      "risk_score": 90
+      "approved": true,
+      "status": "approved",
+      "reason": "Invoice passed all validation checks with no issues. Policy lane is auto_approve_candidate, supporting approval.",
+      "risk_score": 10
     },
     "INV-1005": {
       "invoice_number": "INV-1005",
       "approved": false,
       "status": "manual_review",
-      "reason": "Insufficient inventory for multiple items requires manual review before approval.",
-      "risk_score": 75
+      "reason": "Invoice passes all validation checks but is assigned to the manual review policy lane.",
+      "risk_score": 40
     },
     "INV-1006": {
       "invoice_number": "INV-1006",
-      "approved": false,
-      "status": "rejected",
-      "reason": "Invoice contains items with insufficient inventory and out-of-stock issues.",
-      "risk_score": 90
+      "approved": true,
+      "status": "approved",
+      "reason": "Invoice passed validation with no issues; classified as auto_approve_candidate policy lane; total is non-negative and dates are valid.",
+      "risk_score": 5
     },
     "INV-1007": {
       "invoice_number": "INV-1007",
       "approved": false,
-      "status": "rejected",
-      "reason": "Invoice total mismatch and multiple out-of-stock items including WidgetB and GadgetX; insufficient inventory for WidgetA.",
-      "risk_score": 90
+      "status": "manual_review",
+      "reason": "Invoice total does not match expected total (Total Mismatch issue). Policy lane suggests manual review candidate.",
+      "risk_score": 60
     },
     "INV-1008": {
       "invoice_number": "INV-1008",
       "approved": false,
-      "status": "rejected",
-      "reason": "Invoice contains unknown items and suspicious vendor name; auto_reject_candidate policy mandates rejection.",
-      "risk_score": 95
+      "status": "manual_review",
+      "reason": "Suspicious vendor name 'NoProd Industries' flagged in validation. Policy lane indicates manual review.",
+      "risk_score": 65
     },
     "INV-1009": {
       "invoice_number": "INV-1009",
       "approved": false,
       "status": "rejected",
-      "reason": "Multiple critical validation errors: missing vendor, missing due date, negative quantity, subtotal mismatch, and negative invoice total under auto_reject_candidate policy.",
-      "risk_score": 100
+      "reason": "Negative quantity for item 'WidgetA', negative total invoice amount, missing vendor name and due date, subtotal mismatch.",
+      "risk_score": 95
     },
     "INV-1010": {
       "invoice_number": "INV-1010",
       "approved": false,
-      "status": "rejected",
-      "reason": "Invoice total mismatch and multiple out-of-stock issues including insufficient inventory for 'WidgetA' and no stock for 'WidgetB' and 'GadgetX'.",
-      "risk_score": 90
+      "status": "manual_review",
+      "reason": "Invoice total 7185.0 mismatches expected total 7035.0 (subtotal + tax_amount). Marked manual review candidate by policy lane due to inconsistency in totals.",
+      "risk_score": 75
     },
     "INV-1011": {
       "invoice_number": "INV-1011",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed validation with no issues and fits auto_approve_candidate lane.",
-      "risk_score": 5
+      "reason": "Invoice passed all validations with no issues. Policy lane allows auto-approval. Total amount moderate and no risk factors.",
+      "risk_score": 10
     },
     "INV-1012": {
       "invoice_number": "INV-1012",
-      "approved": false,
-      "status": "rejected",
-      "reason": "Invoice contains items with out-of-stock and insufficient inventory issues; policy lane is auto_reject_candidate.",
-      "risk_score": 90
+      "approved": true,
+      "status": "approved",
+      "reason": "Invoice passed all validations with no issues. Policy lane is auto_approve_candidate. Invoice fields are consistent and total amount is reasonable.",
+      "risk_score": 5
     },
     "INV-1013": {
       "invoice_number": "INV-1013",
       "approved": false,
-      "status": "rejected",
-      "reason": "Invoice total mismatch; Insufficient inventory for WidgetA; Out of stock for WidgetB and GadgetX.",
-      "risk_score": 95
+      "status": "manual_review",
+      "reason": "Invoice total mismatch: reported total 22562.8 differs from expected total 22512.8 (subtotal + tax_amount). Policy lane indicates manual review.",
+      "risk_score": 60
     },
     "INV-1014": {
       "invoice_number": "INV-1014",
-      "approved": false,
-      "status": "rejected",
-      "reason": "Invoice contains out of stock item 'WidgetB' and insufficient inventory for 'WidgetA'.",
-      "risk_score": 90
+      "approved": true,
+      "status": "approved",
+      "reason": "Invoice passed all validations with no issues and is classified as auto_approve_candidate policy lane.",
+      "risk_score": 5
     },
     "INV-1015": {
       "invoice_number": "INV-1015",
-      "approved": false,
-      "status": "rejected",
-      "reason": "Invoice contains out of stock items WidgetB and GadgetX, and insufficient inventory for WidgetA.",
-      "risk_score": 85
+      "approved": true,
+      "status": "approved",
+      "reason": "Invoice passed validation with no issues. Policy lane is auto_approve_candidate, and invoice amounts are positive and reasonable.",
+      "risk_score": 5
     },
     "INV-1016": {
       "invoice_number": "INV-1016",
-      "approved": false,
-      "status": "rejected",
-      "reason": "Invoice contains unknown item, out-of-stock item, and insufficient inventory.",
-      "risk_score": 95
+      "approved": true,
+      "status": "approved",
+      "reason": "Invoice passed all validation checks with no issues. Policy lane is auto_approve_candidate and all invoice details are consistent and correct.",
+      "risk_score": 5
     }
   },
-  "payment_results": {}
+  "payment_results": {
+    "INV-1001": {
+      "invoice_number": "INV-1001",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "Widgets Inc.",
+      "amount": 5000.0,
+      "reason": "Invoice passed validation with no issues and is classified as auto_approve_candidate policy lane.",
+      "risk_score": 5
+    },
+    "INV-1002": {
+      "invoice_number": "INV-1002",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "manual_review",
+      "vendor": "Gadgets Co.",
+      "amount": 15000.0,
+      "reason": "Invoice has an unusually urgent due date which is the same as the invoice date. Policy lane indicates manual review candidate.",
+      "risk_score": 65
+    },
+    "INV-1003": {
+      "invoice_number": "INV-1003",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "rejected",
+      "vendor": "Fraudster LLC",
+      "amount": 100000.0,
+      "reason": "Invoice has invalid dates (due date before invoice date), suspicious vendor name, coercive and suspicious payment instructions, and an out of stock item.",
+      "risk_score": 95
+    },
+    "INV-1004": {
+      "invoice_number": "INV-1004",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "Precision Parts Ltd.",
+      "amount": 5940.0,
+      "reason": "Invoice passed all validation checks with no issues. Policy lane is auto_approve_candidate, supporting approval.",
+      "risk_score": 10
+    },
+    "INV-1005": {
+      "invoice_number": "INV-1005",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "manual_review",
+      "vendor": "Global Supply Chain Partners",
+      "amount": 15225.0,
+      "reason": "Invoice passes all validation checks but is assigned to the manual review policy lane.",
+      "risk_score": 40
+    },
+    "INV-1006": {
+      "invoice_number": "INV-1006",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "Acme Industrial Supplies",
+      "amount": 2750.0,
+      "reason": "Invoice passed validation with no issues; classified as auto_approve_candidate policy lane; total is non-negative and dates are valid.",
+      "risk_score": 5
+    },
+    "INV-1007": {
+      "invoice_number": "INV-1007",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "manual_review",
+      "vendor": "MegaWidgets Corp",
+      "amount": 15525.0,
+      "reason": "Invoice total does not match expected total (Total Mismatch issue). Policy lane suggests manual review candidate.",
+      "risk_score": 60
+    },
+    "INV-1008": {
+      "invoice_number": "INV-1008",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "manual_review",
+      "vendor": "NoProd Industries",
+      "amount": 9900.0,
+      "reason": "Suspicious vendor name 'NoProd Industries' flagged in validation. Policy lane indicates manual review.",
+      "risk_score": 65
+    },
+    "INV-1009": {
+      "invoice_number": "INV-1009",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "rejected",
+      "vendor": "",
+      "amount": -250.0,
+      "reason": "Negative quantity for item 'WidgetA', negative total invoice amount, missing vendor name and due date, subtotal mismatch.",
+      "risk_score": 95
+    },
+    "INV-1010": {
+      "invoice_number": "INV-1010",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "manual_review",
+      "vendor": "Consolidated Materials Group",
+      "amount": 7185.0,
+      "reason": "Invoice total 7185.0 mismatches expected total 7035.0 (subtotal + tax_amount). Marked manual review candidate by policy lane due to inconsistency in totals.",
+      "risk_score": 75
+    },
+    "INV-1011": {
+      "invoice_number": "INV-1011",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "Summit Manufacturing Co.",
+      "amount": 3000.0,
+      "reason": "Invoice passed all validations with no issues. Policy lane allows auto-approval. Total amount moderate and no risk factors.",
+      "risk_score": 10
+    },
+    "INV-1012": {
+      "invoice_number": "INV-1012",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "QuickShip Distributers",
+      "amount": 9975.0,
+      "reason": "Invoice passed all validations with no issues. Policy lane is auto_approve_candidate. Invoice fields are consistent and total amount is reasonable.",
+      "risk_score": 5
+    },
+    "INV-1013": {
+      "invoice_number": "INV-1013",
+      "payment_status": "not_paid",
+      "approved": false,
+      "decision_status": "manual_review",
+      "vendor": "Atlas Industrial Supply",
+      "amount": 22562.8,
+      "reason": "Invoice total mismatch: reported total 22562.8 differs from expected total 22512.8 (subtotal + tax_amount). Policy lane indicates manual review.",
+      "risk_score": 60
+    },
+    "INV-1014": {
+      "invoice_number": "INV-1014",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "TechParts International",
+      "amount": 4125.0,
+      "reason": "Invoice passed all validations with no issues and is classified as auto_approve_candidate policy lane.",
+      "risk_score": 5
+    },
+    "INV-1015": {
+      "invoice_number": "INV-1015",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "Reliable Components Inc.",
+      "amount": 6500.0,
+      "reason": "Invoice passed validation with no issues. Policy lane is auto_approve_candidate, and invoice amounts are positive and reasonable.",
+      "risk_score": 5
+    },
+    "INV-1016": {
+      "invoice_number": "INV-1016",
+      "payment_status": "success",
+      "approved": true,
+      "decision_status": "approved",
+      "vendor": "Widgets Inc.",
+      "amount": 3233.0,
+      "reason": "Invoice passed all validation checks with no issues. Policy lane is auto_approve_candidate and all invoice details are consistent and correct.",
+      "risk_score": 5
+    }
+  }
 }

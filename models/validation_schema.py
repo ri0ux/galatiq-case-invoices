@@ -24,9 +24,16 @@ class ItemValidation(BaseModel):
         description="List of validation issues discovered"
     )
 
+class FraudCheckResult(BaseModel):
+    suspicious: bool = Field(..., description="Whether the invoice appears suspicious")
+    issues: List[ValidationIssue] = Field(default_factory=list)
+
 class AggregatedItemDemand(BaseModel):
     normalized_item_name: str
     display_name: str
     total_quantity: int
     total_amount: float
     invoice_numbers: List[str] = Field(default_factory=list)
+
+class NamingResult(BaseModel):
+    name: str = Field(..., description="Canonical normalized item name used for inventory lookup")

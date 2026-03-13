@@ -4,7 +4,6 @@ from agno.models.openai import OpenAIResponses
 from models.invoice_schema import Invoice, ItemCollection, RawInvoiceFile
 from models.invoice_state import GLOBAL_INVOICE_STATE 
 from typing import cast, Dict, Any
-from tools.parsing_tools import get_validation_by_file_name
 import json
 from dotenv import load_dotenv
 
@@ -19,12 +18,6 @@ class IngestionAgent:
             markdown=True,
             output_schema=Invoice
         )
-        self.item_agent = Agent(
-            model=OpenAIResponses("gpt-4.1-mini"),
-            markdown=True,
-            output_schema=ItemCollection,
-            tools=[get_validation_by_file_name]
-            )
 
     async def invoice_extractor(self, file_name: str, raw_invoice: RawInvoiceFile) -> Invoice:
         """
@@ -49,8 +42,6 @@ class IngestionAgent:
                             )
         # Explicit cast for type checking
         invoice = cast(Invoice, run_output.content)
-        # update gloab invoice object
-        GLOBAL_INVOICE_STATE.invoices[file_name] = invoice
         return invoice
     
     
