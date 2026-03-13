@@ -1,6 +1,6 @@
 {
   "invoices": {
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1001.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1001.txt": {
       "invoice_number": "INV-1001",
       "file_name": "data/invoices/invoice_1001.txt",
       "vendor": {
@@ -31,7 +31,7 @@
       "payment_terms": "Net 15",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1002.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1002.txt": {
       "invoice_number": "INV-1002",
       "file_name": "data/invoices/invoice_1002.txt",
       "vendor": {
@@ -56,7 +56,7 @@
       "payment_terms": "Net 30",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1003.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1003.txt": {
       "invoice_number": "INV-1003",
       "file_name": "data/invoices/invoice_1003.txt",
       "vendor": {
@@ -73,7 +73,7 @@
           "total_price": 100000.0
         }
       ],
-      "subtotal": 100000.0,
+      "subtotal": null,
       "tax_rate": null,
       "tax_amount": null,
       "total": 100000.0,
@@ -81,7 +81,7 @@
       "payment_terms": "Immediate",
       "notes": "URGENT - Pay immediately to avoid penalties!!! Wire transfer preferred."
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1004.json": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1004.json": {
       "invoice_number": "INV-1004",
       "file_name": "data/invoices/invoice_1004.json",
       "vendor": {
@@ -112,7 +112,7 @@
       "payment_terms": "Net 30",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1004_revised.json": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1004_revised.json": {
       "invoice_number": "INV-1004-REV",
       "file_name": "data/invoices/invoice_1004.json",
       "vendor": {
@@ -149,7 +149,7 @@
       "payment_terms": "Net 30",
       "notes": "Revised invoice - additional items added per PO amendment"
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1005.json": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1005.json": {
       "invoice_number": "INV-1005",
       "file_name": "data/invoices/invoice_1005.json",
       "vendor": {
@@ -186,7 +186,7 @@
       "payment_terms": "Net 60",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1006.csv": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1006.csv": {
       "invoice_number": "INV-1006",
       "file_name": "data/invoices/invoice_1006.csv",
       "vendor": {
@@ -217,7 +217,7 @@
       "payment_terms": "Net 15",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1007.csv": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1007.csv": {
       "invoice_number": "INV-1007",
       "file_name": "data/invoices/invoice_1007.csv",
       "vendor": {
@@ -254,7 +254,7 @@
       "payment_terms": null,
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1008.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1008.txt": {
       "invoice_number": "INV-1008",
       "file_name": "data/invoices/invoice_1008.txt",
       "vendor": {
@@ -285,7 +285,7 @@
       "payment_terms": null,
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1009.json": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1009.json": {
       "invoice_number": "INV-1009",
       "file_name": "data/invoices/invoice_1009.json",
       "vendor": {
@@ -316,7 +316,7 @@
       "payment_terms": "",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1010.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1010.txt": {
       "invoice_number": "INV-1010",
       "file_name": "data/invoices/invoice_1010.txt",
       "vendor": {
@@ -359,7 +359,7 @@
       "payment_terms": "Net 30",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1011.pdf": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1011.pdf": {
       "invoice_number": "INV-1011",
       "file_name": "data/invoices/invoice_1011.pdf",
       "vendor": {
@@ -390,7 +390,7 @@
       "payment_terms": null,
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1011.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1011.txt": {
       "invoice_number": "INV-1011",
       "file_name": "data/invoices/invoice_1011.txt",
       "vendor": {
@@ -421,7 +421,7 @@
       "payment_terms": "Net 30",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1012.pdf": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1012.pdf": {
       "invoice_number": "INV-1012",
       "file_name": "data/invoices/invoice_1012.pdf",
       "vendor": {
@@ -458,7 +458,7 @@
       "payment_terms": "Net 30",
       "notes": "Ref PO-20260115. Deliver to warehouse dock B. Contact Jim at ext 4421 with questions."
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1012.txt": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1012.txt": {
       "invoice_number": "INV-1012",
       "file_name": "data/invoices/invoice_1012.txt",
       "vendor": {
@@ -495,7 +495,7 @@
       "payment_terms": "Net 30",
       "notes": "Ref PO-20260115. Deliver to warehouse dock B. Contact Jim at ext 4421 with questions."
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1013.json": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1013.json": {
       "invoice_number": "INV-1013",
       "file_name": "data/invoices/invoice_1013.json",
       "vendor": {
@@ -562,7 +562,7 @@
       "payment_terms": "Net 60",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1013.pdf": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1013.pdf": {
       "invoice_number": "INV-1013",
       "file_name": "data/invoices/invoice_1013.pdf",
       "vendor": {
@@ -629,7 +629,7 @@
       "payment_terms": "Net 60",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1014.xml": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1014.xml": {
       "invoice_number": "INV-1014",
       "file_name": "data/invoices/invoice_1014.xml",
       "vendor": {
@@ -660,7 +660,7 @@
       "payment_terms": "Net 30",
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1015.csv": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1015.csv": {
       "invoice_number": "INV-1015",
       "file_name": "data/invoices/invoice_1015.csv",
       "vendor": {
@@ -697,7 +697,7 @@
       "payment_terms": null,
       "notes": null
     },
-    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpbh29kcx7\\invoice_1016.json": {
+    "C:\\Users\\mrzim\\AppData\\Local\\Temp\\tmpyta82hq5\\invoice_1016.json": {
       "invoice_number": "INV-1016",
       "file_name": "data/invoices/invoice_1016.json",
       "vendor": {
@@ -809,7 +809,7 @@
           "total_price": 100000.0
         }
       ],
-      "subtotal": 100000.0,
+      "subtotal": null,
       "tax_rate": null,
       "tax_amount": null,
       "total": 100000.0,
@@ -1369,7 +1369,7 @@
         {
           "item": "due_date",
           "issue_type": "Unusually Urgent Due Date",
-          "message": "Invoice due date is the same as the invoice date, indicating an unusually urgent due date."
+          "message": "Invoice due date is the same as the invoice date, indicating an unusually urgent payment requirement."
         }
       ]
     },
@@ -1391,17 +1391,17 @@
         {
           "item": "due_date",
           "issue_type": "Unusually Urgent Due Date",
-          "message": "Invoice due date is before the invoice date, which is unusually urgent and suspicious."
+          "message": "Due date is before the invoice date, which is unusually urgent and suspicious."
         },
         {
           "item": "payment_terms",
           "issue_type": "Urgent Payment Terms",
-          "message": "Payment terms marked as 'Immediate', indicating urgency that can be a fraud signal."
+          "message": "Payment terms specify 'Immediate', indicating urgency that can be a fraud signal."
         },
         {
           "item": "notes",
           "issue_type": "Coercive Payment Language",
-          "message": "Notes contain coercive language urging immediate payment and specify wire transfer, raising suspicion."
+          "message": "Notes contain coercive language urging immediate payment to avoid penalties."
         },
         {
           "item": "FakeItem",
@@ -1446,9 +1446,9 @@
       "status": "failed",
       "issues": [
         {
-          "item": "NoProd Industries",
+          "item": "vendor_name",
           "issue_type": "Suspicious Vendor Naming",
-          "message": "The vendor name 'NoProd Industries' is unusual and could indicate a suspicious or fraudulent vendor."
+          "message": "The vendor name 'NoProd Industries' is unusual and could be a red flag for a fraudulent or non-existent vendor."
         }
       ]
     },
@@ -1481,6 +1481,21 @@
           "item": null,
           "issue_type": "Negative Total",
           "message": "Invoice total is negative: -250.0."
+        },
+        {
+          "item": "vendor_name",
+          "issue_type": "Suspicious Vendor Naming",
+          "message": "Vendor name is missing, which is suspicious and may indicate a fraudulent or social engineering attempt."
+        },
+        {
+          "item": "due_date",
+          "issue_type": "Unusually Urgent Due Date",
+          "message": "Due date is missing, preventing normal payment timelines and possibly indicating urgency to pressure payment."
+        },
+        {
+          "item": "total",
+          "issue_type": "Suspicious Amount",
+          "message": "Invoice total is negative, which is unusual and suspicious for invoicing."
         }
       ]
     },
@@ -1640,112 +1655,112 @@
       "invoice_number": "INV-1001",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validation checks with no issues and is allocated to auto_approve_candidate lane.",
+      "reason": "Invoice passed all validations with no issues, policy lane is auto_approve_candidate, and invoice is clean and low risk.",
       "risk_score": 5
     },
     "INV-1002": {
       "invoice_number": "INV-1002",
       "approved": false,
       "status": "manual_review",
-      "reason": "Invoice has an unusually urgent due date the same as the invoice date, flagged as a manual review candidate by policy lane.",
-      "risk_score": 60
+      "reason": "Invoice has an unusually urgent due date set to the same day as the invoice date, posing a payment risk. Policy lane suggests manual review.",
+      "risk_score": 70
     },
     "INV-1003": {
       "invoice_number": "INV-1003",
       "approved": false,
       "status": "rejected",
-      "reason": "Invoice has multiple serious validation issues including invalid dates (due date before invoice date), suspicious vendor name, urgent and coercive payment terms, and an out-of-stock item 'FakeItem'.",
-      "risk_score": 90
+      "reason": "Invoice has multiple critical issues: invalid dates with due date before invoice date, suspicious vendor name, out of stock item, coercive payment language, and urgent payment terms.",
+      "risk_score": 95
     },
     "INV-1004": {
       "invoice_number": "INV-1004",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validations with no issues. Policy lane is auto_approve_candidate. Invoice total is reasonable and no risks detected.",
-      "risk_score": 10
+      "reason": "Invoice validation passed with no issues. Policy lane is auto_approve_candidate and invoice is clean and low risk.",
+      "risk_score": 5
     },
     "INV-1005": {
       "invoice_number": "INV-1005",
       "approved": false,
       "status": "manual_review",
-      "reason": "Invoice total is high and invoice is categorized as manual_review_candidate by the policy lane.",
-      "risk_score": 45
+      "reason": "No validation issues found but invoice is designated as manual_review_candidate. Higher-dollar invoice merits additional review.",
+      "risk_score": 40
     },
     "INV-1006": {
       "invoice_number": "INV-1006",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validation checks with no listed issues and is assigned to auto_approve_candidate lane.",
+      "reason": "Invoice passed all validation checks, no issues present, and is in the auto_approve_candidate policy lane.",
       "risk_score": 5
     },
     "INV-1007": {
       "invoice_number": "INV-1007",
       "approved": false,
       "status": "manual_review",
-      "reason": "Invoice total (15525.0) mismatches expected total (15635.0) indicating a total mismatch issue.",
-      "risk_score": 70
+      "reason": "Invoice has a total mismatch issue: invoice total 15525.0 does not match expected 15635.0 (subtotal + tax_amount). Policy lane suggests manual review candidate.",
+      "risk_score": 60
     },
     "INV-1008": {
       "invoice_number": "INV-1008",
       "approved": false,
       "status": "manual_review",
-      "reason": "Invoice failed validation due to suspicious vendor naming indicating possible fraud; policy lane suggests manual review.",
-      "risk_score": 75
+      "reason": "Invoice failed validation due to suspicious vendor name 'NoProd Industries'. Policy lane specifies manual review; significant risk indicated by validation issue.",
+      "risk_score": 70
     },
     "INV-1009": {
       "invoice_number": "INV-1009",
       "approved": false,
       "status": "rejected",
-      "reason": "Invoice has multiple hard failures: missing vendor, missing due date, negative quantity on 'WidgetA', subtotal mismatch, and negative total amount.",
-      "risk_score": 90
+      "reason": "Invoice has multiple critical issues: missing vendor name, missing due date, negative quantity for item 'WidgetA', negative invoice total, and subtotal mismatch. Marked as auto_reject_candidate policy lane.",
+      "risk_score": 95
     },
     "INV-1010": {
       "invoice_number": "INV-1010",
       "approved": false,
       "status": "manual_review",
-      "reason": "Invoice total mismatch detected: invoice total 7185.0 does not equal expected total 7035.0 based on subtotal and tax amount.",
-      "risk_score": 60
+      "reason": "Invoice total mismatch detected (7185.0 vs expected 7035.0). Policy lane also suggests manual review.",
+      "risk_score": 70
     },
     "INV-1011": {
       "invoice_number": "INV-1011",
       "approved": true,
       "status": "approved",
-      "reason": "No validation issues found and classified as auto_approve_candidate policy lane.",
-      "risk_score": 10
+      "reason": "Invoice passed all validation checks with no issues and falls under an auto approve policy lane.",
+      "risk_score": 5
     },
     "INV-1012": {
       "invoice_number": "INV-1012",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validation checks with no issues, classified as auto_approve_candidate, and has no validation failures.",
+      "reason": "Invoice validation passed with no issues; categorized as auto_approve_candidate policy lane; invoice fields are consistent and no risk factors present.",
       "risk_score": 5
     },
     "INV-1013": {
       "invoice_number": "INV-1013",
       "approved": false,
       "status": "manual_review",
-      "reason": "Total Mismatch: invoice total 22562.8 vs expected 22512.8. Policy lane requires manual review.",
-      "risk_score": 50
+      "reason": "Invoice total mismatch: total = 22562.8 but expected 22512.8 based on subtotal + tax amount.",
+      "risk_score": 65
     },
     "INV-1014": {
       "invoice_number": "INV-1014",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validations with no issues and is classified as auto_approve_candidate lane.",
-      "risk_score": 5
+      "reason": "Invoice passed validation with no issues and is classified as auto_approve_candidate policy lane.",
+      "risk_score": 10
     },
     "INV-1015": {
       "invoice_number": "INV-1015",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed validation with no issues, assigned to auto_approve_candidate policy lane, and has no risk factors.",
-      "risk_score": 5
+      "reason": "Invoice passed validation with no issues; policy lane is auto_approve_candidate; invoice total $6500 is within acceptable limits.",
+      "risk_score": 10
     },
     "INV-1016": {
       "invoice_number": "INV-1016",
       "approved": true,
       "status": "approved",
-      "reason": "Invoice passed all validation checks with no issues. Policy lane indicates auto_approve_candidate. Invoice details are consistent and no risks identified.",
+      "reason": "Invoice validation passed with no issues; falls under auto_approve_candidate policy lane; invoice details are consistent and total amount is reasonable.",
       "risk_score": 5
     }
   },
@@ -1757,7 +1772,7 @@
       "decision_status": "approved",
       "vendor": "Widgets Inc.",
       "amount": 5000.0,
-      "reason": "Invoice passed all validation checks with no issues and is allocated to auto_approve_candidate lane.",
+      "reason": "Invoice passed all validations with no issues, policy lane is auto_approve_candidate, and invoice is clean and low risk.",
       "risk_score": 5
     },
     "INV-1002": {
@@ -1767,8 +1782,8 @@
       "decision_status": "manual_review",
       "vendor": "Gadgets Co.",
       "amount": 15000.0,
-      "reason": "Invoice has an unusually urgent due date the same as the invoice date, flagged as a manual review candidate by policy lane.",
-      "risk_score": 60
+      "reason": "Invoice has an unusually urgent due date set to the same day as the invoice date, posing a payment risk. Policy lane suggests manual review.",
+      "risk_score": 70
     },
     "INV-1003": {
       "invoice_number": "INV-1003",
@@ -1777,8 +1792,8 @@
       "decision_status": "rejected",
       "vendor": "Fraudster LLC",
       "amount": 100000.0,
-      "reason": "Invoice has multiple serious validation issues including invalid dates (due date before invoice date), suspicious vendor name, urgent and coercive payment terms, and an out-of-stock item 'FakeItem'.",
-      "risk_score": 90
+      "reason": "Invoice has multiple critical issues: invalid dates with due date before invoice date, suspicious vendor name, out of stock item, coercive payment language, and urgent payment terms.",
+      "risk_score": 95
     },
     "INV-1004": {
       "invoice_number": "INV-1004",
@@ -1787,8 +1802,8 @@
       "decision_status": "approved",
       "vendor": "Precision Parts Ltd.",
       "amount": 5940.0,
-      "reason": "Invoice passed all validations with no issues. Policy lane is auto_approve_candidate. Invoice total is reasonable and no risks detected.",
-      "risk_score": 10
+      "reason": "Invoice validation passed with no issues. Policy lane is auto_approve_candidate and invoice is clean and low risk.",
+      "risk_score": 5
     },
     "INV-1005": {
       "invoice_number": "INV-1005",
@@ -1797,8 +1812,8 @@
       "decision_status": "manual_review",
       "vendor": "Global Supply Chain Partners",
       "amount": 15225.0,
-      "reason": "Invoice total is high and invoice is categorized as manual_review_candidate by the policy lane.",
-      "risk_score": 45
+      "reason": "No validation issues found but invoice is designated as manual_review_candidate. Higher-dollar invoice merits additional review.",
+      "risk_score": 40
     },
     "INV-1006": {
       "invoice_number": "INV-1006",
@@ -1807,7 +1822,7 @@
       "decision_status": "approved",
       "vendor": "Acme Industrial Supplies",
       "amount": 2750.0,
-      "reason": "Invoice passed all validation checks with no listed issues and is assigned to auto_approve_candidate lane.",
+      "reason": "Invoice passed all validation checks, no issues present, and is in the auto_approve_candidate policy lane.",
       "risk_score": 5
     },
     "INV-1007": {
@@ -1817,8 +1832,8 @@
       "decision_status": "manual_review",
       "vendor": "MegaWidgets Corp",
       "amount": 15525.0,
-      "reason": "Invoice total (15525.0) mismatches expected total (15635.0) indicating a total mismatch issue.",
-      "risk_score": 70
+      "reason": "Invoice has a total mismatch issue: invoice total 15525.0 does not match expected 15635.0 (subtotal + tax_amount). Policy lane suggests manual review candidate.",
+      "risk_score": 60
     },
     "INV-1008": {
       "invoice_number": "INV-1008",
@@ -1827,18 +1842,18 @@
       "decision_status": "manual_review",
       "vendor": "NoProd Industries",
       "amount": 9900.0,
-      "reason": "Invoice failed validation due to suspicious vendor naming indicating possible fraud; policy lane suggests manual review.",
-      "risk_score": 75
+      "reason": "Invoice failed validation due to suspicious vendor name 'NoProd Industries'. Policy lane specifies manual review; significant risk indicated by validation issue.",
+      "risk_score": 70
     },
     "INV-1009": {
       "invoice_number": "INV-1009",
       "payment_status": "not_paid",
       "approved": false,
       "decision_status": "rejected",
-      "vendor": "",
-      "amount": -250.0,
-      "reason": "Invoice rejected due to multiple hard failures including missing vendor, missing due date, negative quantity on line item, subtotal mismatch, and negative total amount.",
-      "risk_score": 90
+      "vendor": null,
+      "amount": null,
+      "reason": "Invoice has multiple critical issues: missing vendor name, missing due date, negative quantity for item 'WidgetA', negative invoice total, and subtotal mismatch. Marked as auto_reject_candidate policy lane.",
+      "risk_score": 95
     },
     "INV-1010": {
       "invoice_number": "INV-1010",
@@ -1847,8 +1862,8 @@
       "decision_status": "manual_review",
       "vendor": "Consolidated Materials Group",
       "amount": 7185.0,
-      "reason": "Invoice total mismatch detected: invoice total 7185.0 does not equal expected total 7035.0 based on subtotal and tax amount.",
-      "risk_score": 60
+      "reason": "Invoice total mismatch detected (7185.0 vs expected 7035.0). Policy lane also suggests manual review.",
+      "risk_score": 70
     },
     "INV-1011": {
       "invoice_number": "INV-1011",
@@ -1857,8 +1872,8 @@
       "decision_status": "approved",
       "vendor": "Summit Manufacturing Co.",
       "amount": 3000.0,
-      "reason": "No validation issues found and classified as auto_approve_candidate policy lane.",
-      "risk_score": 10
+      "reason": "Invoice passed all validation checks with no issues and falls under an auto approve policy lane.",
+      "risk_score": 5
     },
     "INV-1012": {
       "invoice_number": "INV-1012",
@@ -1867,7 +1882,7 @@
       "decision_status": "approved",
       "vendor": "QuickShip Distributers",
       "amount": 9975.0,
-      "reason": "Invoice passed all validation checks with no issues, classified as auto_approve_candidate, and has no validation failures.",
+      "reason": "Invoice validation passed with no issues; categorized as auto_approve_candidate policy lane; invoice fields are consistent and no risk factors present.",
       "risk_score": 5
     },
     "INV-1013": {
@@ -1877,8 +1892,8 @@
       "decision_status": "manual_review",
       "vendor": "Atlas Industrial Supply",
       "amount": 22562.8,
-      "reason": "Total Mismatch: invoice total 22562.8 vs expected 22512.8. Policy lane requires manual review.",
-      "risk_score": 50
+      "reason": "Invoice total mismatch: total = 22562.8 but expected 22512.8 based on subtotal + tax amount.",
+      "risk_score": 65
     },
     "INV-1014": {
       "invoice_number": "INV-1014",
@@ -1887,8 +1902,8 @@
       "decision_status": "approved",
       "vendor": "TechParts International",
       "amount": 4125.0,
-      "reason": "Invoice passed all validations with no issues and is classified as auto_approve_candidate lane.",
-      "risk_score": 5
+      "reason": "Invoice passed validation with no issues and is classified as auto_approve_candidate policy lane.",
+      "risk_score": 10
     },
     "INV-1015": {
       "invoice_number": "INV-1015",
@@ -1897,8 +1912,8 @@
       "decision_status": "approved",
       "vendor": "Reliable Components Inc.",
       "amount": 6500.0,
-      "reason": "Invoice passed validation with no issues, assigned to auto_approve_candidate policy lane, and has no risk factors.",
-      "risk_score": 5
+      "reason": "Invoice passed validation with no issues; policy lane is auto_approve_candidate; invoice total $6500 is within acceptable limits.",
+      "risk_score": 10
     },
     "INV-1016": {
       "invoice_number": "INV-1016",
@@ -1907,7 +1922,7 @@
       "decision_status": "approved",
       "vendor": "Widgets Inc.",
       "amount": 3233.0,
-      "reason": "Invoice passed all validation checks with no issues. Policy lane indicates auto_approve_candidate. Invoice details are consistent and no risks identified.",
+      "reason": "Invoice validation passed with no issues; falls under auto_approve_candidate policy lane; invoice details are consistent and total amount is reasonable.",
       "risk_score": 5
     }
   }

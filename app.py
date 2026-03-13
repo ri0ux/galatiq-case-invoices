@@ -257,14 +257,21 @@ def render_items_section(state: dict[str, Any]) -> None:
         st.info("No item validation data available.")
 
 
-def render_conflicts_section(state: dict[str, Any]) -> None:
-    st.subheader("Invoice Conflicts")
-    conflicts = state.get("invoice_conflicts", [])
-    if conflicts:
-        st.json(conflicts)
-    else:
-        st.success("No invoice conflicts detected.")
 
+def render_manual_review_section(state: dict[str, Any]) -> None:
+    st.subheader("Manual Review Required")
+    df = build_invoice_table(state)
+
+    if df.empty:
+        st.info("No invoice results available.")
+        return
+
+    manual_review_df = df[df["Approval"] == "manual_review"]
+
+    if manual_review_df.empty:
+        st.info("No invoices require manual review.")
+    else:
+        st.dataframe(manual_review_df, use_container_width=True, hide_index=True)
 
 st.title("🧾 Invoice Processing Automation")
 st.caption("Multi-agent invoice ingestion, validation, approval, and payment demo")
@@ -309,7 +316,7 @@ else:
     st.markdown("---")
 
     tab1, tab2, tab3, tab4 = st.tabs(
-        ["Invoice Results", "Invoice Detail", "Inventory Analysis", "Conflicts"]
+        ["Invoice Results", "Invoice Detail", "Inventory Analysis", "Manual Review"]
     )
 
     with tab1:
@@ -336,4 +343,4 @@ else:
         render_items_section(state)
 
     with tab4:
-        render_conflicts_section(state)
+        render_manual_review_section(state)

@@ -72,16 +72,30 @@ agents/
         validation_team.py
         deterministic_validation_agent.py
         fraud_detection_agent.py
+data/
+    generate_pdfs.py
+    invoices/
+      all invoices (pdf, json, xml, etc)
 
 models/
     invoice_schema.py
     validation_schema.py
     invoice_state.py
+    approval_schema.py
+    payment_schema.py
 
 tools/
     validation_tools.py
+    approval_tools.py
+    inventory_tools.py
+    parsing_tools.py
+    payment_tools.py
 
 utils/
+    cli.py
+    invoice_loader.py
+    logger.py
+    text_normalize.py
     normalizer.py
     db_functions.py
     file_loader.py
@@ -103,13 +117,13 @@ The command-line interface processes invoices and writes the final system state 
 ## Run with a single invoice
 
 ```
-python main.py --invoice_path path/to/invoice.txt
+python main.py --invoice_path=path/to/invoice.txt
 ```
 
 ## Run with a directory of invoices
 
 ```
-python main.py --invoice_dir path/to/invoices/
+python main.py --invoice_dir=path/to/invoices/
 ```
 
 After execution, the system writes:
@@ -232,6 +246,10 @@ OPENAI_API_KEY=your_key_here
 ```
 
 ---
+
+# Logs
+
+Logs for the pipeline can be viewed in logs/invoice_pipeline.txt
 
 # Notes
 
