@@ -1,20 +1,22 @@
 import argparse
 import os
 import asyncio
+from agents import approval_agent
 from agents.ingestion_agent import IngestionAgent
 from agents.validation_agent import ValidationAgent
+from agents.approval_agent import ApprovalAgent
 from utils.file_loader import load_single_invoice, load_invoice_directory
+from utils.invoice_canonicalizer import canonicalize_invoices
 from models.invoice_schema import RawInvoiceFile
 from models.invoice_state import GLOBAL_INVOICE_STATE
+from utils.item_aggregation import item_summarizer
+import json
 
 
 def load_invoice(path: str) -> RawInvoiceFile:
     """
     Load a single invoice file and return a RawInvoiceFile object.
     """
-
-    print(f"\nProcessing invoice: {path}")
-
     ext = os.path.splitext(path)[1]
     raw_text = load_single_invoice(path)
 
@@ -92,10 +94,9 @@ async def main():
     if not invoices:
         return
 
-    print(f"\nStarting AGENT on {len(invoices)} invoices...")
-
     ingestion_agent = IngestionAgent()
     validation_agent = ValidationAgent()
+    approval_agent = ApprovalAgent()
 
     # 1. Create a list of extraction coroutine objects
     tasks = [
@@ -105,19 +106,33 @@ async def main():
     
     # 2. Run all extraction tasks concurrently
     # The '*' unpacks the list so gather sees gather(coro1, coro2, ...)
-    print("Extracting data from all invoices concurrently...")
     await asyncio.gather(*tasks)
 
     # 3. Validation and Summarization usually require the previous steps 
     # to be finished (Map-Reduce pattern)
-    print("Validating invoices...")
-    invoice_findings = validation_agent.invoice_validator()
-    print("Invoice findings: ",invoice_findings)
+    # invoice_findings = validation_agent.invoice_validator()
     
-    print("Summarizing final item collection...")
-    items = ingestion_agent.item_summarizer()
+    # items = ingestion_agent.item_summarizer()
+
+    # approval_agent.run()
+    # summary= item_summarizer()
+
+    canonical_invoices, conflicts = canonicalize_invoices()
+    res = validation_agent.run()
+    res = approval_agent.run()
     
-    print("\nFINAL ITEMS:\n", items)
+    # print("\n================ FINAL GLOBAL OUTPUT ================")
+    with open("final_invoice_state.json", "w", encoding="utf-8") as f:
+        json.dump(
+            GLOBAL_INVOICE_STATE.model_dump(), 
+            f, 
+            indent=2, 
+            default=str,
+            ensure_ascii=False  # Keeps symbols like € or £ readable
+    )
+
+    print("✅ Global state successfully exported to final_invoice_state.json")
+    # print("=====================================================")
 
 if __name__ == "__main__":
     # 4. Use asyncio.run to start the event loop

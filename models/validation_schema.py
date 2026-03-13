@@ -23,3 +23,10 @@ class ItemValidation(BaseModel):
         default_factory=list,
         description="List of validation issues discovered"
     )
+
+class AggregatedItemDemand(BaseModel):
+    normalized_item_name: str
+    display_name: str
+    total_quantity: int
+    total_amount: float
+    invoice_numbers: List[str] = Field(default_factory=list)

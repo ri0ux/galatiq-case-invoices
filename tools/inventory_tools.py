@@ -3,9 +3,14 @@ import sqlite3
 
 conn = sqlite3.connect("inventory.db")
 def get_count_of_item(item: str):
-    """Use this function to get count of items in the sql db.
-        Args:
-    item (int): Number of stories to return. Defaults to 10.
+    """
+    Get inventory count for an item from SQLite database.
+
+    Args:
+        item (str): item name
+
+    Returns:
+        int | None
     """
     cursor = conn.cursor()
 
